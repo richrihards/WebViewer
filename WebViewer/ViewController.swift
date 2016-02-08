@@ -8,17 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
+class ViewController: UIViewController, UIWebViewDelegate {
 
-    @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var mainWebView: UIWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        urlTextField.delegate = self
-        mainWebView.delegate = self
+        // Nomaini URL pec vajadzibas.
+        // Principa vajag izmantot https, citadi jataisa workaround. 
 
+        let urlString = "https://www.google.lv"
+        let url = NSURL(string: urlString)
+        let request = NSURLRequest(URL: url!)
+
+        mainWebView.delegate = self
+        mainWebView.loadRequest(request)
     }
 
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
@@ -34,18 +39,5 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
         print("Started loading page \(webView.request?.URL?.absoluteString)")
 
     }
-
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
-        return true
-    }
-
-    func textFieldDidEndEditing(textField: UITextField) {
-
-        let url = NSURL(string: textField.text!)
-        let request = NSURLRequest(URL: url!)
-        mainWebView.loadRequest(request)
-    }
-
-
 }
 

@@ -17,33 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter url here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lG4-kJ-yN4">
-                                <rect key="frame" x="0.0" y="33" width="600" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="cVJ-85-QNp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXh-br-upK">
-                                <rect key="frame" x="0.0" y="71" width="600" height="529"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="lG4-kJ-yN4" secondAttribute="trailing" id="6XF-ZR-Fto"/>
                             <constraint firstAttribute="trailing" secondItem="wXh-br-upK" secondAttribute="trailing" id="CML-tU-r0D"/>
-                            <constraint firstItem="lG4-kJ-yN4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="Gxt-x5-vm1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wXh-br-upK" secondAttribute="bottom" id="ZkT-6N-W5g"/>
-                            <constraint firstItem="wXh-br-upK" firstAttribute="top" secondItem="lG4-kJ-yN4" secondAttribute="bottom" constant="8" id="dcv-bz-2cI"/>
-                            <constraint firstItem="lG4-kJ-yN4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kFK-31-Jit"/>
                             <constraint firstItem="wXh-br-upK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x5u-Xe-fK5"/>
+                            <constraint firstItem="wXh-br-upK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ywe-cb-8mO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mainWebView" destination="wXh-br-upK" id="W7o-dO-WC4"/>
-                        <outlet property="urlTextField" destination="lG4-kJ-yN4" id="If1-CK-OMz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
