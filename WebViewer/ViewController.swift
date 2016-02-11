@@ -16,9 +16,8 @@ class ViewController: UIViewController, UIWebViewDelegate {
         super.viewDidLoad()
 
         // Nomaini URL pec vajadzibas.
-        // Principa vajag izmantot https, citadi jataisa workaround. 
 
-        let urlString = "https://www.google.lv"
+        let urlString = "http://www.google.lv"
         let url = NSURL(string: urlString)
         let request = NSURLRequest(URL: url!)
 
